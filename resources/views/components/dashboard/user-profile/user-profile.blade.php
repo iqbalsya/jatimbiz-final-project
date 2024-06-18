@@ -79,22 +79,6 @@
                                 <p class='text-danger inputerror'>{{ $message }} </p>
                                 @enderror
                                 </div>
-
-                                <div class="mb-3 col-md-6">
-                                    <label class="form-label">Phone</label>
-                                    <input type="number" name="phone" class="form-control border border-2 p-2" value='{{ old('phone', auth()->user()->phone) }}'>
-                                    @error('phone')
-                                    <p class='text-danger inputerror'>{{ $message }} </p>
-                                    @enderror
-                                </div>
-
-                                <div class="mb-3 col-md-6">
-                                    <label class="form-label">Location</label>
-                                    <input type="text" name="location" class="form-control border border-2 p-2" value='{{ old('location', auth()->user()->location) }}'>
-                                    @error('location')
-                                    <p class='text-danger inputerror'>{{ $message }} </p>
-                                    @enderror
-                                </div>
                             </div>
                             <button type="submit" class="btn bg-gradient-dark">Submit</button>
                         </form>

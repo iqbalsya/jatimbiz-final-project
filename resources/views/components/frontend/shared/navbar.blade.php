@@ -2,13 +2,11 @@
     <div class="container topbar bg-success d-lg-block">
         <div class="d-flex justify-content-between">
             <div class="top-info ps-2">
-                <small class="me-3"><i class="fas fa-map-marker-alt text-secondary"></i> <a href="#" class="text-white">123 Street, New York</a></small>
-                <small class="me-3"><i class="fas fa-envelope me-1 text-secondary"></i><a href="#" class="text-white">Email@Example.com</a></small>
+                <small><i class="fas fa-envelope me-1 text-secondary"></i><a href="#" class="text-white">jatimbiz@gmail.com</a></small>
             </div>
             <div class="top-link pe-2">
                 <a href="#" class="text-white"><small class="text-white mx-2">Privacy Policy</small>/</a>
-                <a href="#" class="text-white"><small class="text-white mx-2">Terms of Use</small>/</a>
-                <a href="#" class="text-white"><small class="text-white ms-2">Sales and Refunds</small></a>
+                <a href="#" class="text-white"><small class="text-white mx-2">Terms of Use</small></a>
             </div>
         </div>
     </div>
@@ -19,9 +17,9 @@
             <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                 <div class="navbar-nav mx-auto py-0">
                     <a href="{{ url('/home') }}" class="nav-item nav-link {{ Request::is('home') ? 'active text-success fw-bold' : '' }}">Home</a>
-                    <a href="{{ url('/umkm') }}" class="nav-item nav-link {{ Request::is('umkm') ? 'active text-success fw-bold' : '' }}">UMKM</a>
-                    <a href="{{ url('/product') }}" class="nav-item nav-link {{ Request::is('product') ? 'active text-success fw-bold' : '' }}">Products</a>
-                    <a href="{{ url('/contact') }}" class="nav-item nav-link {{ Request::is('contact') ? 'active text-success fw-bold' : '' }}">Contact</a>
+                    <a href="{{ url('/umkm') }}" class="nav-item nav-link {{ Request::is('umkm') || Request::is('umkm/*') ? 'active text-success fw-bold' : '' }}">UMKM</a>
+                    <a href="{{ url('/product') }}" class="nav-item nav-link {{ Request::is('product') || Request::is('product/*') ? 'active text-success fw-bold' : '' }}">Produk</a>
+                    <a href="{{ url('/contact') }}" class="nav-item nav-link {{ Request::is('contact') ? 'active text-success fw-bold' : '' }}">Kontak</a>
                 </div>
 
                 @guest

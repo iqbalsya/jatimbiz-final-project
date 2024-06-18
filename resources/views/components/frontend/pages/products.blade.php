@@ -1,46 +1,33 @@
-@php
-    use Illuminate\Support\Str;
-@endphp
-
 @extends('layouts.app')
 
 @section('content')
 
 <!-- Single Page Header start -->
 <div class="container-fluid page-header py-5">
-    <h1 class="text-center text-white display-6">Shop</h1>
-    <ol class="breadcrumb justify-content-center mb-0">
-        <li class="breadcrumb-item"><a href="#">Home</a></li>
-        <li class="breadcrumb-item"><a href="#">Pages</a></li>
-        <li class="breadcrumb-item active text-white">Shop</li>
-    </ol>
+    <h1 class="text-center text-white display-6">Produk UMKM Jawa Timur</h1>
 </div>
 <!-- Single Page Header End -->
-
 
 <!-- Fruits Shop Start-->
 <div class="container-fluid fruite py-5">
     <div class="container py-5">
-        <h1 class="mb-4">Fresh fruits shop</h1>
         <div class="row g-4">
             <div class="col-lg-12">
-                <div class="row g-4">
-                    <div class="col-xl-3">
-                        <div class="input-group w-100 mx-auto d-flex">
-                            <input type="search" class="form-control p-3" placeholder="keywords" aria-describedby="search-icon-1">
-                            <span id="search-icon-1" class="input-group-text p-3"><i class="fa fa-search"></i></span>
-                        </div>
+                <div class="row g-4 mb-2">
+                    <div class="col-xl-10">
+                        <h1 class="">List Produk</h1>
                     </div>
-                    <div class="col-6"></div>
-                    <div class="col-xl-3">
+                    <div class="col-xl-2">
                         <div class="bg-light ps-3 py-3 rounded d-flex justify-content-between mb-4">
-                            <label for="fruits">Default Sorting:</label>
-                            <select id="fruits" name="fruitlist" class="border-0 form-select-sm bg-light me-3" form="fruitform">
-                                <option value="nothing">Nothing</option>
-                                <option value="popularity">Popularity</option>
-                                <option value="organic">Organic</option>
-                                <option value="fantastic">Fantastic</option>
-                            </select>
+                            <label class="pt-1" for="city">Cari di:</label>
+                            <form id="cityForm" method="GET" action="{{ isset($category) ? route('products.category', $category->id) : route('products') }}">
+                                <select id="city" name="city_id" class="border-0 form-select-sm bg-light me-3" onchange="document.getElementById('cityForm').submit();">
+                                    <option value="">Semua Kota</option>
+                                    @foreach($cities as $city)
+                                        <option value="{{ $city->id }}" {{ $selectedCity == $city->id ? 'selected' : '' }}>{{ $city->name }}</option>
+                                    @endforeach
+                                </select>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -49,7 +36,7 @@
                         <div class="row g-4">
                             <div class="col-lg-12">
                                 <div class="mb-3">
-                                    <h4>Categories</h4>
+                                    <h4>Kategori</h4>
                                     <ul class="list-unstyled fruite-categorie">
                                         <li>
                                             <div class="d-flex justify-content-between fruite-name">
@@ -57,11 +44,11 @@
                                                 <span>({{ $totalProduct }})</span>
                                             </div>
                                         </li>
-                                        @foreach($categories as $category)
+                                        @foreach($categories as $categoryItem)
                                             <li>
                                                 <div class="d-flex justify-content-between fruite-name">
-                                                    <a href="{{ route('products.category', $category->id) }}"><i class="fas fa-circle me-2 text-success"></i>{{ $category->name }}</a>
-                                                    <span>({{ $category->products->count() }})</span>
+                                                    <a href="{{ route('products.category', $categoryItem->id) }}"><i class="fas fa-circle me-2 text-success"></i>{{ $categoryItem->name }}</a>
+                                                    <span>({{ $categoryItem->products->count() }})</span>
                                                 </div>
                                             </li>
                                         @endforeach
@@ -84,7 +71,7 @@
                                             <p>{{ Str::limit($product->description, 40, '...') }}</p>
                                             <div class="d-flex justify-content-between flex-lg-wrap">
                                                 <p class="text-dark fs-5 fw-bold mb-0 pt-1">Rp. {{ number_format($product->price, 0, ',', '.') }}</p>
-                                                <a href="#" class="btn border border-secondary rounded-pill px-3 text-success">Selengkapnya</a>
+                                                <a href="{{ route('product.detail', ['id' => $product->id]) }}" class="btn border border-secondary rounded-pill px-3 text-success">Selengkapnya</a>
                                             </div>
                                         </div>
                                     </div>

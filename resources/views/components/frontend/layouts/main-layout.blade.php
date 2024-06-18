@@ -3,10 +3,12 @@
 
 <head>
     <meta charset="utf-8">
-    <title>UMKM Catalog</title>
+    <title>JatimBIZ</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
+    <link rel="icon" type="image/png" href="{{ asset('assets') }}/img/jatimicon.png">
+
     <!-- Google Web Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@600;800&display=swap">
     <!-- Icon Font Stylesheet -->
@@ -29,17 +31,17 @@
         }
 
         .pagination .page-item .page-link {
-            padding: 0.5rem 0.75rem; /* Adjust padding as needed */
-            font-size: 1rem;        /* Ensure consistent font size */
+            padding: 0.5rem 0.75rem;
+            font-size: 1rem;
         }
 
         .pagination .page-item.active .page-link {
-            background-color: #1a9e30; /* Bootstrap primary color for active link */
-            border-color: #148527;     /* Same color as background */
-            color: #fff;               /* Text color for active link */
+            background-color: #1a9e30;
+            border-color: #148527;
+            color: #fff;
         }
 
-        .hero-header {
+        .hero-header, .page-header {
             background-image: url('assets/img/jatim.jpg');
             background-size: cover;
             background-position: center;

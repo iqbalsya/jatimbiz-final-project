@@ -10,7 +10,7 @@
                     <div class="card my-4">
                         <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2 border-radius-lg">
                             <div class="bg-gradient-success shadow-success border-radius-lg pt-4 pb-3">
-                                <h4 class="text-white text-capitalize ps-3">Edit Produk</h4>
+                                <h4 class="text-white text-capitalize ps-3">Edit Produk - {{ $product->name }}</h4>
                             </div>
                         </div>
                         <div class="card-body">
@@ -67,6 +67,31 @@
                                             @enderror
                                         </div>
                                     </div>
+
+                                    <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group mb-3">
+                                            <label for="weight">Berat (gram)&nbsp;<span class="text-danger">*</span></label>
+                                            <input type="number" class="form-control @error('weight') is-invalid @enderror" id="weight" name="weight" value="{{ old('weight', $product->weight) }}">
+                                            @error('weight')
+                                                <div class="invalid-feedback">{{ $message }}</div>
+                                            @enderror
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group mb-3">
+                                            <label for="condition">Kondisi&nbsp;<span class="text-danger">*</span></label>
+                                            <select class="form-control @error('condition') is-invalid @enderror" id="condition" name="condition">
+                                                <option value="">Pilih Kondisi</option>
+                                                <option value="baru" {{ $product->condition === 'baru' ? 'selected' : '' }}>Baru</option>
+                                                <option value="bekas" {{ $product->condition === 'bekas' ? 'selected' : '' }}>Bekas</option>
+                                            </select>
+                                            @error('condition')
+                                                <div class="invalid-feedback">{{ $message }}</div>
+                                            @enderror
+                                        </div>
+                                    </div>
+                                </div>
                                 </div>
                                 <div class="form-group mb-5">
                                     <label for="description">Deskripsi</label>
@@ -122,6 +147,8 @@
                                         </div>
                                     </div>
                                 </div>
+
+
                                 <div class="d-flex justify-content-end">
                                     <a href="{{ route('products.index') }}" class="btn btn-secondary mb-0 mt-3 me-2">Batal</a>
                                     <button type="submit" class="btn btn-success mb-0 mt-3">Simpan</button>

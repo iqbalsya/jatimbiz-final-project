@@ -18,7 +18,7 @@
                             <h4>{{ $product->name }}</h4>
                             <div class="d-flex justify-content-between flex-lg-wrap">
                                 <p class="text-dark fs-5 fw-bold mb-0 pt-1">Rp. {{ number_format($product->price, 0, ',', '.') }}</p>
-                                <a href="#" class="btn border border-secondary rounded-pill px-3 text-success">Selengkapnya</a>
+                                <a href="{{ route('product.detail', ['id' => $product->id]) }}" class="btn border border-secondary rounded-pill px-3 text-success">Selengkapnya</a>
                             </div>
                         </div>
                     </div>

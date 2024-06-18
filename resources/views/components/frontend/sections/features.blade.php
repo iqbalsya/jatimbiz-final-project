@@ -4,37 +4,37 @@
             <div class="col-lg-3 col-md-6">
                 <div class="feature-item text-center bg-light p-4">
                     <div class="feature-icon mx-auto mb-3">
-                        <i class="fa fa-shield-alt text-primary"></i>
+                        <i class="fa fa-star fa-4x text-success"></i>
                     </div>
-                    <h5 class="mb-3">Quality Assurance</h5>
-                    <p class="mb-0">We ensure the highest quality products from UMKM.</p>
+                    <h5 class="mb-3">Ulasan Pelanggan</h5>
+                    <p class="mb-0">Kami menyediakan ulasan dari pelanggan untuk setiap produk UMKM di Jawa Timur.</p>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6">
                 <div class="feature-item text-center bg-light p-4">
                     <div class="feature-icon mx-auto mb-3">
-                        <i class="fa fa-sync-alt text-primary"></i>
+                        <i class="fa fa-info-circle fa-4x text-success"></i>
                     </div>
-                    <h5 class="mb-3">Seamless Integration</h5>
-                    <p class="mb-0">Our platform integrates smoothly with various services.</p>
+                    <h5 class="mb-3">Informasi Produk Lengkap</h5>
+                    <p class="mb-0">Setiap produk memiliki informasi penjualan yang lengkap untuk membantu konsumen.</p>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6">
                 <div class="feature-item text-center bg-light p-4">
                     <div class="feature-icon mx-auto mb-3">
-                        <i class="fa fa-headset text-primary"></i>
+                        <i class="fa fa-comments fa-4x text-success"></i>
                     </div>
-                    <h5 class="mb-3">24/7 Support</h5>
-                    <p class="mb-0">We offer round-the-clock support for our users.</p>
+                    <h5 class="mb-3">Dukungan 24/7</h5>
+                    <p class="mb-0">Tim dukungan kami siap membantu UMKM dan pengguna sepanjang waktu di Jawa Timur.</p>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6">
                 <div class="feature-item text-center bg-light p-4">
                     <div class="feature-icon mx-auto mb-3">
-                        <i class="fa fa-lock text-primary"></i>
+                        <i class="fa fa-handshake fa-4x text-success"></i>
                     </div>
-                    <h5 class="mb-3">Secure Payment</h5>
-                    <p class="mb-0">We provide secure payment options for your convenience.</p>
+                    <h5 class="mb-3">Dukungan UMKM Lokal</h5>
+                    <p class="mb-0">Kami mendukung UMKM lokal di Jawa Timur dengan mempromosikan produk mereka.</p>
                 </div>
             </div>
         </div>

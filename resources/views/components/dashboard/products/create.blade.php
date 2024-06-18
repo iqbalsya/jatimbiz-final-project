@@ -67,6 +67,33 @@
                                         </div>
                                     </div>
                                 </div>
+
+                                <!-- Tambahkan weight dan condition -->
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group mb-3">
+                                            <label for="weight">Berat (gram)&nbsp;<span class="text-danger">*</span></label>
+                                            <input type="number" class="form-control @error('weight') is-invalid @enderror" id="weight" name="weight" value="{{ old('weight') }}">
+                                            @error('weight')
+                                                <div class="invalid-feedback">{{ $message }}</div>
+                                            @enderror
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group mb-3">
+                                            <label for="condition">Kondisi&nbsp;<span class="text-danger">*</span></label>
+                                            <select class="form-control @error('condition') is-invalid @enderror" id="condition" name="condition">
+                                                <option value="">Pilih Kondisi</option>
+                                                <option value="baru" {{ old('condition') == 'baru' ? 'selected' : '' }}>Baru</option>
+                                                <option value="bekas" {{ old('condition') == 'bekas' ? 'selected' : '' }}>Bekas</option>
+                                            </select>
+                                            @error('condition')
+                                                <div class="invalid-feedback">{{ $message }}</div>
+                                            @enderror
+                                        </div>
+                                    </div>
+                                </div>
+
                                 <div class="form-group mb-5">
                                     <label for="description">Deskripsi</label>
                                     <textarea class="form-control @error('description') is-invalid @enderror" id="description" name="description">{{ old('description') }}</textarea>

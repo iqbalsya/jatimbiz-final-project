@@ -2,9 +2,6 @@
     <div class="container position-sticky z-index-sticky top-0">
         <div class="row">
             <div class="col-12">
-                <!-- Navbar -->
-                <x-dashboard.navbars.navs.guest signin='login' signup='register'></x-dashboard.navbars.navs.guest>
-                <!-- End Navbar -->
             </div>
         </div>
     </div>
@@ -15,7 +12,7 @@
             <div class="container mt-5">
                 <div class="row signin-margin">
                     <div class="col-lg-4 col-md-8 col-12 mx-auto">
-                        <div class="card z-index-0 fadeIn3 fadeInBottom">
+                        <div class="card z-index-0 fadeIn3 fadeInBottom mt-5">
                             <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
                                 <div class="bg-gradient-success shadow-success border-radius-lg py-3 pe-1 pb-4">
                                     <h4 class="text-white font-weight-bolder text-center mt-2 mb-0">Sign in</h4>
@@ -53,12 +50,8 @@
                                         <button type="submit" class="btn bg-gradient-success w-100 my-4 mb-2">Sign in</button>
                                     </div>
                                     <p class="mt-4 text-sm text-center">
-                                        Don't have an account?
+                                        Belum punya akun?
                                         <a href="{{ route('register') }}" class="text-success text-gradient font-weight-bold">Sign up</a>
-                                    </p>
-                                    <p class="text-sm text-center">
-                                        Forgot your password? Reset your password
-                                        <a href="{{ route('verify') }}" class="text-success text-gradient font-weight-bold">here</a>
                                     </p>
                                 </form>
                             </div>

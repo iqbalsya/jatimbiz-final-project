@@ -19,12 +19,12 @@
                                         <div class="card-header p-3 pt-2">
                                             <h5 class="mb-0">Foto Produk</h5>
                                         </div>
-                                        <div class="card-body p-3">
+                                        <div class="card-body p-3 mt-2">
                                             <div id="productImages" class="carousel slide" data-ride="carousel">
                                                 <div class="carousel-inner text-center">
                                                     @if ($product->image1)
                                                         <div class="carousel-item active">
-                                                            <img src="{{ asset('storage/' . $product->image1) }}" class="d-block mx-auto w-50" alt="{{ $product->name }}">
+                                                            <img src="{{ asset('storage/' . $product->image1) }}" class="d-block mx-auto w-100" alt="{{ $product->name }}">
                                                         </div>
                                                     @endif
                                                     @if ($product->image2)
@@ -48,14 +48,6 @@
                                                         </div>
                                                     @endif
                                                 </div>
-                                                <a class="carousel-control-prev" href="#productImages" role="button" data-slide="prev">
-                                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                                    <span class="sr-only">Previous</span>
-                                                </a>
-                                                <a class="carousel-control-next" href="#productImages" role="button" data-slide="next">
-                                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                                    <span class="sr-only">Next</span>
-                                                </a>
                                             </div>
                                             <div class="d-flex justify-content-center mt-3">
                                                 @if ($product->image1)
@@ -100,6 +92,15 @@
                                                         <th scope="row">Harga</th>
                                                         <td>Rp. {{ number_format($product->price, 0, ',', '.') }}</td>
                                                     </tr>
+                                                                                                                                                    <tr class="align-middle" height="64px">
+                                                        <th scope="row">Berat</th>
+                                                        <td>{{ $product->weight }} gram</td>
+                                                    </tr>
+                                                                                                                                                    <tr class="align-middle" height="64px">
+                                                        <th scope="row">Kondisi</th>
+                                                        <td>{{ $product->condition }}</td>
+                                                    </tr>
+
                                                     <tr class="align-middle" height="64px">
                                                         <th scope="row">Deskripsi</th>
                                                         <td style="white-space: normal; word-wrap: break-word;">{{ $product->description }}</td>

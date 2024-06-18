@@ -17,7 +17,7 @@ class RolesAndPermissionsSeeder extends Seeder
         $userRole = Role::create(['name' => 'user']);
 
         // Menetapkan peran kepada pengguna tertentu
-        $admin = User::where('email', 'admin@material.com')->first();
+        $admin = User::where('email', 'admin@email.com')->first();
         $admin->assignRole($adminRole);
 
         $user = User::where('email', 'user@email.com')->first();

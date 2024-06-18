@@ -31,12 +31,6 @@ class SessionsController extends Controller
 
         session()->regenerate();
 
-        if (auth()->user()->hasRole('admin')) {
-            return redirect('/dashboard');
-        } else if (auth()->user()->hasRole('user')) {
-            return redirect('/');
-        }
-
         return redirect()->back();
     }
 

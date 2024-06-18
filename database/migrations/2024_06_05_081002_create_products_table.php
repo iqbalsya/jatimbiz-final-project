@@ -15,6 +15,8 @@ class CreateProductsTable extends Migration
             $table->string('name', 255);
             $table->text('description');
             $table->decimal('price', 10, 2);
+            $table->integer('weight')->nullable();
+            $table->enum('condition', ['bekas', 'baru'])->nullable();
             $table->string('image1')->nullable();
             $table->string('image2')->nullable();
             $table->string('image3')->nullable();
