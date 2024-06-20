@@ -12,11 +12,11 @@
     </div>
     <div class="container px-0">
         <nav class="navbar navbar-light bg-white navbar-expand-xl">
-            <a href="{{ url('/home') }}" class="navbar-brand"><h1 class="text-success display-6">Jatim<span class="fw-normal">BIZ</span></h1></a>
+            <a href="{{ url('/') }}" class="navbar-brand"><h1 class="text-success display-6">Jatim<span class="fw-normal">BIZ</span></h1></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                 <div class="navbar-nav mx-auto py-0">
-                    <a href="{{ url('/home') }}" class="nav-item nav-link {{ Request::is('home') ? 'active text-success fw-bold' : '' }}">Home</a>
+                    <a href="{{ url('/') }}" class="nav-item nav-link {{ Request::is('home') ? 'active text-success fw-bold' : '' }}">Home</a>
                     <a href="{{ url('/umkm') }}" class="nav-item nav-link {{ Request::is('umkm') || Request::is('umkm/*') ? 'active text-success fw-bold' : '' }}">UMKM</a>
                     <a href="{{ url('/product') }}" class="nav-item nav-link {{ Request::is('product') || Request::is('product/*') ? 'active text-success fw-bold' : '' }}">Produk</a>
                     <a href="{{ url('/contact') }}" class="nav-item nav-link {{ Request::is('contact') ? 'active text-success fw-bold' : '' }}">Kontak</a>

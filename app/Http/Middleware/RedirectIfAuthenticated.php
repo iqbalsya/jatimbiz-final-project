@@ -24,7 +24,7 @@ class RedirectIfAuthenticated
                 if (Auth::user()->hasRole('admin')) {
                     return redirect('/users');
                 } elseif (Auth::user()->hasRole('user')) {
-                    return redirect('/home');
+                    return redirect('/');
                 }
             }
         }
