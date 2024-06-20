@@ -96,7 +96,7 @@
                 });
 
                 function confirmDelete() {
-                    return confirm('Apakah Anda yakin ingin menghapus siswa ini?');
+                    return confirm('Apakah Anda yakin ingin menghapus produk ini?');
                 }
             </script>
         </div>

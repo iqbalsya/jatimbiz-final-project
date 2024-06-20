@@ -82,7 +82,7 @@
                 });
 
                 function confirmDelete() {
-                    return confirm('Apakah Anda yakin ingin menghapus siswa ini?');
+                    return confirm('Apakah Anda yakin ingin menghapus kategori ini?');
                 }
             </script>
         </div>

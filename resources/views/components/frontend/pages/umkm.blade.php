@@ -44,7 +44,7 @@
                             <div class="col-6">
                                 <a href="{{ route('umkm.products', $merchant->id) }}" class="h4">{{ Str::limit($merchant->name, 16, '...') }}</a>
                                 <h5 class="mb-3">{{ $merchant->city->name }}</h5>
-                                <a href="{{ route('umkm.products', $merchant->id) }}" class="btn border border-secondary rounded-pill px-3 text-success"><i class="fa fa-shopping-bag me-2 text-success"></i> Lihat Produk</a>
+                                <a href="{{ route('umkm.products', $merchant->id) }}" class="btn border border-secondary rounded-pill px-3 text-success">Lihat Produk</a>
                             </div>
                         </div>
                     </div>

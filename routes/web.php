@@ -13,7 +13,6 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\UserController;
 
 Route::group(['middleware' => ['auth', 'role:admin']], function () {
-    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
     Route::resource('cities', CityController::class);
     Route::resource('categories', CategoryController::class);
     Route::resource('products', ProductController::class);

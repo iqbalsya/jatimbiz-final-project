@@ -33,7 +33,6 @@
                                     <tr>
                                         <th class="text-center" width="16px">No</th>
                                         <th class="text-center">Nama</th>
-                                        <th class="text-center" width="200px">Email</th>
                                         <th class="text-center" width="200px">Kota</th>
                                         <th class="text-center" width="100px">Nomor WA</th>
                                         <th class="text-center" width="100px">Gambar</th>
@@ -45,7 +44,6 @@
                                         <tr>
                                             <td class="text-center">{{ $loop->iteration }}</td>
                                             <td class="text-center">{{ $merchant->name }}</td>
-                                            <td class="text-center">{{ $merchant->email }}</td>
                                             <td class="text-center">{{ $merchant->city->name }}</td>
                                             <td class="text-center">{{ $merchant->wa_number }}</td>
                                             <td class="text-center">
