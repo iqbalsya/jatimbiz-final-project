@@ -29,7 +29,7 @@ Route::group(['middleware' => ['auth', 'role:user']], function () {
 });
 
 
-Route::get('', [FrontendController::class, 'home'])->name('home');
+Route::get('/', [FrontendController::class, 'home'])->name('home');
 Route::get('/umkm', [FrontendController::class, 'umkm'])->name('umkm');
 Route::get('/umkm/{id}', [FrontendController::class, 'umkmProducts'])->name('umkm.products');
 Route::get('/product', [FrontendController::class, 'products'])->name('products');
