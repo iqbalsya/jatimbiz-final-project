@@ -29,7 +29,7 @@ class FrontendController extends Controller
                 ->where('city_id', $selectedCity)
                 ->paginate(6);
         } else {
-            $merchants = Merchant::with('products', 'city')->paginate(6);
+            $merchants = Merchant::with('products', 'city')->paginate(9);
         }
 
         $cities = City::all();
@@ -60,7 +60,7 @@ class FrontendController extends Controller
                 })
                 ->paginate(6);
         } else {
-            $products = Product::with('category', 'merchant')->paginate(6);
+            $products = Product::with('category', 'merchant')->paginate(9);
         }
 
         $categories = Category::all();

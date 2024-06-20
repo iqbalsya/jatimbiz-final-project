@@ -14,10 +14,10 @@
         <div class="row g-4">
             <div class="col-lg-12">
                 <div class="row g-4 mb-2">
-                    <div class="col-xl-10">
+                    <div class="col-xl-9">
                         <h1 class="">List Produk</h1>
                     </div>
-                    <div class="col-xl-2">
+                    <div class="col-xl-3">
                         <div class="bg-light ps-3 py-3 rounded d-flex justify-content-between mb-4">
                             <label class="pt-1" for="city">Cari di:</label>
                             <form id="cityForm" method="GET" action="{{ isset($category) ? route('products.category', $category->id) : route('products') }}">

@@ -16,8 +16,7 @@
                 <a class="btn btn-link" href="">Support</a>
             </div>
             <div class="col-lg-4 col-md-6 ps-3">
-                <h4 class="text-white mb-3">Newsletter</h4>
-                <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+                <h4 class="text-white mb-3">Visit Us</h4>
                 <div class="d-flex pt-2 gap-2">
                     <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
                     <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>

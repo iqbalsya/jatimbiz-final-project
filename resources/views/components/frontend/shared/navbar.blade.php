@@ -4,10 +4,6 @@
             <div class="top-info ps-2">
                 <small><i class="fas fa-envelope me-1 text-secondary"></i><a href="#" class="text-white">jatimbiz@gmail.com</a></small>
             </div>
-            <div class="top-link pe-2">
-                <a href="#" class="text-white"><small class="text-white mx-2">Privacy Policy</small>/</a>
-                <a href="#" class="text-white"><small class="text-white mx-2">Terms of Use</small></a>
-            </div>
         </div>
     </div>
     <div class="container px-0">

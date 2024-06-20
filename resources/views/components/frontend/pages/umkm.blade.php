@@ -50,11 +50,13 @@
                     </div>
                 </div>
             @endforeach
+            <div class="col-12">
+                <div class="pagination d-flex justify-content-center mt-5">
+                    {{ $merchants->links('pagination::bootstrap-4') }}
+                </div>
+            </div>
         </div>
     </div>
-</div>
-<div class="d-flex justify-content-center">
-    {{ $merchants->links() }}
 </div>
 <!-- Fruits Shop End-->
 
